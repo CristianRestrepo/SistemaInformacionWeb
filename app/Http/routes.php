@@ -14,6 +14,9 @@
 Route::get('/', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
 Route::resource('departments', 'DepartmentController');
+Route::resource('area', 'AreaController');
+Route::resource('subject', 'SubjectController');
+Route::resource('career', 'CareerController');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
