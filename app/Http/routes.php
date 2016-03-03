@@ -17,6 +17,7 @@ Route::resource('departments', 'DepartmentController');
 Route::resource('area', 'AreaController');
 Route::resource('subject', 'SubjectController');
 Route::resource('career', 'CareerController');
+Route::resource('admin', 'UserController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
