@@ -14,7 +14,7 @@ class SubjectController extends Controller {
 	 */
 	public function index()
 	{
-		//
+		return view('subjects.index');
 	}
 
 	/**
@@ -24,7 +24,7 @@ class SubjectController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view('subjects.create-edit');
 	}
 
 	/**
@@ -56,7 +56,7 @@ class SubjectController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		return view('subjects.create-edit');
 	}
 
 	/**

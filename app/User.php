@@ -13,25 +13,24 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	use Authenticatable, CanResetPassword;
 	use EntrustUserTrait; // add this trait to your user model
 
-	/**
-	 * The database table used by the model.
-	 *
-	 * @var string
-	 */
 	protected $table = 'users';
-
-	/**
-	 * The attributes that are mass assignable.
-	 *
-	 * @var array
-	 */
 	protected $fillable = ['name','code','birth','email', 'password','phone','mphone','department_id','image_path','image_name'];
-
-	/**
-	 * The attributes excluded from the model's JSON form.
-	 *
-	 * @var array
-	 */
 	protected $hidden = ['password', 'remember_token'];
+
+
+	public function publications()
+	{
+		return $this->hasMany('App\Publication');
+	}
+
+	public function comments_publications()
+	{
+		return $this->hasMany('App\Comment_Publication');
+	}
+
+	public function comments_forums()
+	{
+		return $this->hasMany('App\Comment_Forum');
+	}
 
 }
